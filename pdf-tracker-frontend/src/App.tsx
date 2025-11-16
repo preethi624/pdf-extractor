@@ -10,7 +10,7 @@ function App() {
     <>
     <Routes>
        
-      <Route path="/upload" element={<UploadForm/>}/> 
+      <Route path="/" element={<UploadForm/>}/> 
 
 
     </Routes>
