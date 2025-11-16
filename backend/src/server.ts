@@ -1,7 +1,7 @@
 import express,{Application,Request,Response} from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import uploadRoutes from "../src/routes/uploadRoutes"
+import uploadRoutes from "./routes/uploadRoutes"
 
 import connectDB from "./config/db";
 dotenv.config()

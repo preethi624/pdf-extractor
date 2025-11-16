@@ -4,51 +4,6 @@ import { IUploadService } from "../services/IUploadService";
 import { supabase } from "../config/supabaseClient";
 export class UploadController implements IUploadController{
     constructor(private _uploadService:IUploadService){}
-    /*async uploadFile(req:Request,res:Response):Promise<void>{
-        try {
-            if(!req.file){
-              res.status(400).json({ success: false, message: "No file uploaded" });
-            }
-            const { originalname, size, filename, public_id } = req.file as any;
-            const secure_url = (req.file as any).path;
-            console.log(req.file);
-            
-            const fileData = {
-        fileName: originalname || filename,
-        fileSize: size,
-        filePath: {
-          url: secure_url,        // Cloudinary URL
-          public_id,        // Cloudinary public ID (for deletion)
-        },
-      };
-      const response=await this._uploadService.fileUpload(fileData)
-       res.status(200).json({
-        success: true,
-        message: "File uploaded successfully",
-        data: response,
-      });
-            
-        } catch (error:unknown) {
-            if (error instanceof Error) {
-      console.error("Upload error:", error.message);
-      res.status(500).json({
-        success: false,
-        message: "Failed to upload file",
-        error: error.message,
-      });
-    } else {
-      // if it's not an Error object (e.g., string or object)
-      console.error("Unknown error:", error);
-      res.status(500).json({
-        success: false,
-        message: "An unexpected error occurred",
-      });
-    }
-            
-        }
-
-
-    }*/
    
 
   async uploadFile(req: Request, res: Response): Promise<void> {
